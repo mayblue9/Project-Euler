@@ -30,3 +30,4 @@ def problem00002(n):
 	return sum
 
 print(time_execution("problem00002(4000000)"))
+# (4613732, 9.362290507778453e-05)

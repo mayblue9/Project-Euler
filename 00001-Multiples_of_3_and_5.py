@@ -21,3 +21,4 @@ def problem00001(n):
 	return sum
 
 print(time_execution("problem00001(1000)"))
+# (233168, 0.0002682881373635263)
