@@ -14,29 +14,15 @@ def time_execution(code):
     run_time = time.clock() - start
     return result, run_time
 
-# Pseudocode for the following algorithm can be found at:
-# https://en.wikipedia.org/wiki/Primality_test
-def isPrime(n):
-	if n <= 1:
-		return False
-	elif n <= 3:
-		return True
-	elif n % 2 == 0 or n % 3 == 0:
-		return False
-	i = 5
-	while i * i <= n:
-		if n % i == 0 or n % (i + 2) == 0:
-			return False
-		i += 6
-	return True
-
 def problem00003(n):
-	for x in range(1, n):
+	a = 0
+	x = 1
+	while x <= n:
 		if n % x == 0:
-			t = n / x
-			if isPrime(t):
-				return t
-
+			a = x
+			n /= x
+		x += 1
+	return a
 
 print(time_execution('problem00003(600851475143)'))
-# (6857.0, 13.509592983197322)
+# (6857, 0.0015863230979117119)
