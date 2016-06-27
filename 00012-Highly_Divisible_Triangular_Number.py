@@ -50,3 +50,4 @@ def problem00012(n):
 	return num
 
 print(time_execution("problem00012(500)"))
+# (76576500, 8.455592143278237)
